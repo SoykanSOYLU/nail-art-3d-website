@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+Proje: Nail Art 3D Booking Platform
+Genel Bakış
+Nail Art 3D Booking Platform, tırnak sanatı ve bakım hizmetleri için geliştirilmiş, yüksek performanslı ve estetik odaklı bir randevu yönetim sistemidir. Proje, "Quiet Luxury" ve "Old Money" estetiğinden ilham alan minimalist bir kullanıcı arayüzü ile 3D interaktif bileşenleri birleştirmeyi hedefler.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Öne Çıkan Özellikler
+3D İnteraktif Deneyim: Kullanıcıların randevu kartlarını 3D düzlemde hareket ettirebildiği, derinlik hissi veren modern bir arayüz tasarımı.
 
-Currently, two official plugins are available:
+Akıcı 3D Silindirik Carousel: Hizmetlerin, kavisli (cylindrical) bir perspektif içerisinde, sürükleme (drag) ve momentum desteğiyle listelendiği gelişmiş bir navigasyon yapısı.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Adımlı Rezervasyon (Wizard): Hizmet seçimi, tarih/saat yönetimi ve iletişim aşamalarından oluşan, kullanıcıyı yormayan, hataya dayanıklı bir rezervasyon akışı.
 
-## React Compiler
+Minimalist Estetik: "Glow" efektleri ve zarif geçişlerle desteklenen, kullanıcıyı odak noktasında tutan koyu tema tasarımı.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Teknik Yığın (Tech Stack)
+Frontend: React, TypeScript
 
-## Expanding the ESLint configuration
+Animasyon Kütüphanesi: Framer Motion (Fizik tabanlı 3D transformasyonlar ve jest yönetimi için)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Stil: Tailwind CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+State Management: React Hooks (useState, useMotionValue, useTransform)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Kurulum
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki komutları kullanabilirsiniz:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Depoyu Klonlayın:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Bash
+git clone https://github.com/SoykanSOYLU/nail-art-3d-website.git
+2. **Bağımlılıkları Yükleyin:**
+   ```bash
+   npm install
+Projeyi Başlatın:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+## Lisans
+Bu proje geliştirme aşamasındadır ve özgün arayüz tasarım manifestosuna sadık kalınarak oluşturulmuştur.
+
+---
