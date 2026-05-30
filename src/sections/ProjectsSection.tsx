@@ -102,12 +102,10 @@ const ProjectCard: React.FC<CardProps> = ({
     return k < index ? 1.0 : 1.0 - (k - index) * 0.03;
   });
 
-  // Opacity values (fade out cards as they recede into the background, ensuring active card stays at 1.0)
+  // Opacity values: fully visible (1.0) once a card appears, invisible (0.0) before it enters
   const opacityOutputs = inputPoints.map((_, k) => {
     if (k < index) return 0.0;
-    if (k === index || k === index + 1) return 1.0;
-    if (k === totalCards) return 1.0 - (totalCards - 1 - index) * 0.10;
-    return 1.0 - (k - 1 - index) * 0.10;
+    return 1.0;
   });
 
   // Generate blur values (soft blur older cards as they recede, keeping active card sharp at 0px)
